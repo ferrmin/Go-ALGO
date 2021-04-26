@@ -61,6 +61,25 @@
     * [Nike](https://github.com/TheAlgorithms/Go/blob/master/designpatterns/abstractfactory/nike.go)
     * [Nikeshirt](https://github.com/TheAlgorithms/Go/blob/master/designpatterns/abstractfactory/nikeshirt.go)
     * [Nikeshoe](https://github.com/TheAlgorithms/Go/blob/master/designpatterns/abstractfactory/nikeshoe.go)
+  * Builder
+    * [Builderinterface](https://github.com/TheAlgorithms/Go/blob/master/designpatterns/builder/builderinterface.go)
+    * [Builderpattern Test](https://github.com/TheAlgorithms/Go/blob/master/designpatterns/builder/builderpattern_test.go)
+    * [Director](https://github.com/TheAlgorithms/Go/blob/master/designpatterns/builder/director.go)
+    * [House](https://github.com/TheAlgorithms/Go/blob/master/designpatterns/builder/house.go)
+    * [Igloobuilder](https://github.com/TheAlgorithms/Go/blob/master/designpatterns/builder/igloobuilder.go)
+    * [Normalbuilder](https://github.com/TheAlgorithms/Go/blob/master/designpatterns/builder/normalbuilder.go)
+  * Factorymethod
+    * [Accountingdepartment](https://github.com/TheAlgorithms/Go/blob/master/designpatterns/factorymethod/accountingDepartment.go)
+    * [Department](https://github.com/TheAlgorithms/Go/blob/master/designpatterns/factorymethod/department.go)
+    * [Departmentfactory](https://github.com/TheAlgorithms/Go/blob/master/designpatterns/factorymethod/departmentFactory.go)
+    * [Factorymethod Test](https://github.com/TheAlgorithms/Go/blob/master/designpatterns/factorymethod/factorymethod_test.go)
+    * [Financedepartment](https://github.com/TheAlgorithms/Go/blob/master/designpatterns/factorymethod/financeDepartment.go)
+    * [Idepartment](https://github.com/TheAlgorithms/Go/blob/master/designpatterns/factorymethod/idepartment.go)
+  * Prototype
+    * [File](https://github.com/TheAlgorithms/Go/blob/master/designpatterns/prototype/file.go)
+    * [Folder](https://github.com/TheAlgorithms/Go/blob/master/designpatterns/prototype/folder.go)
+    * [Nodeinterface](https://github.com/TheAlgorithms/Go/blob/master/designpatterns/prototype/nodeInterface.go)
+    * [Prototype Test](https://github.com/TheAlgorithms/Go/blob/master/designpatterns/prototype/prototype_test.go)
 
 ## Dynamicprogramming
   * [Binomialcoeffecient](https://github.com/TheAlgorithms/Go/blob/master/dynamicprogramming/binomialcoeffecient.go)
@@ -85,15 +104,22 @@
   * Gcd
     * [Gcd](https://github.com/TheAlgorithms/Go/blob/master/math/gcd/gcd.go)
     * [Gcd Test](https://github.com/TheAlgorithms/Go/blob/master/math/gcd/gcd_test.go)
+    * [Gcditerative](https://github.com/TheAlgorithms/Go/blob/master/math/gcd/gcditerative.go)
+  * Lcm
+    * [Lcm](https://github.com/TheAlgorithms/Go/blob/master/math/lcm/lcm.go)
   * Modulararithmetic
     * [Modularexponentiation](https://github.com/TheAlgorithms/Go/blob/master/math/modulararithmetic/modularexponentiation.go)
     * [Modularexponentiation Test](https://github.com/TheAlgorithms/Go/blob/master/math/modulararithmetic/modularexponentiation_test.go)
+  * Permutation
+    * [Heaps](https://github.com/TheAlgorithms/Go/blob/master/math/permutation/heaps.go)
+    * [Heaps Test](https://github.com/TheAlgorithms/Go/blob/master/math/permutation/heaps_test.go)
   * Power
     * [Fastexponent](https://github.com/TheAlgorithms/Go/blob/master/math/power/fastexponent.go)
     * [Fastexponent Test](https://github.com/TheAlgorithms/Go/blob/master/math/power/fastexponent_test.go)
-  * Primecheck
-    * [Primecheck](https://github.com/TheAlgorithms/Go/blob/master/math/primecheck/primecheck.go)
-    * [Primecheck Test](https://github.com/TheAlgorithms/Go/blob/master/math/primecheck/primecheck_test.go)
+  * Prime
+    * [Millerrabinprimalitytest](https://github.com/TheAlgorithms/Go/blob/master/math/prime/millerrabinprimalitytest.go)
+    * [Prime Test](https://github.com/TheAlgorithms/Go/blob/master/math/prime/prime_test.go)
+    * [Primecheck](https://github.com/TheAlgorithms/Go/blob/master/math/prime/primecheck.go)
   * Pythagoras
     * [Pythagoras](https://github.com/TheAlgorithms/Go/blob/master/math/pythagoras/pythagoras.go)
     * [Pythagoras Test](https://github.com/TheAlgorithms/Go/blob/master/math/pythagoras/pythagoras_test.go)
