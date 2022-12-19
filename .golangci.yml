@@ -1,8 +1,2 @@
 run:
-  go: 1.18
-linters:
-  disable:
-    - gosimple
-    - staticcheck
-    - structcheck
-    - unused
+  go: 1.19
