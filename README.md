@@ -342,25 +342,28 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 ---
 
-#####  Package geometry contains geometric algorithms
+#####  Package geometry contains geometric algorithms Package geometry contains geometric algorithms
 
 ---
 ##### Functions:
 
 1. [`Distance`](./math/geometry/straightlines.go#L18):  Distance calculates the shortest distance between two points.
-2. [`IsParallel`](./math/geometry/straightlines.go#L42):  IsParallel checks if two lines are parallel or not.
-3. [`IsPerpendicular`](./math/geometry/straightlines.go#L47):  IsPerpendicular checks if two lines are perpendicular or not.
-4. [`PointDistance`](./math/geometry/straightlines.go#L53):  PointDistance calculates the distance of a given Point from a given line. The slice should contain the coefficiet of x, the coefficient of y and the constant in the respective order.
-5. [`Section`](./math/geometry/straightlines.go#L24):  Section calculates the Point that divides a line in specific ratio. DO NOT specify the ratio in the form m:n, specify it as r, where r = m / n.
-6. [`Slope`](./math/geometry/straightlines.go#L32):  Slope calculates the slope (gradient) of a line.
-7. [`YIntercept`](./math/geometry/straightlines.go#L37):  YIntercept calculates the Y-Intercept of a line from a specific Point.
+2. [`EuclideanDistance`](./math/geometry/distance.go#L20):  EuclideanDistance returns the Euclidean distance between points in any `n` dimensional Euclidean space.
+3. [`IsParallel`](./math/geometry/straightlines.go#L42):  IsParallel checks if two lines are parallel or not.
+4. [`IsPerpendicular`](./math/geometry/straightlines.go#L47):  IsPerpendicular checks if two lines are perpendicular or not.
+5. [`PointDistance`](./math/geometry/straightlines.go#L53):  PointDistance calculates the distance of a given Point from a given line. The slice should contain the coefficiet of x, the coefficient of y and the constant in the respective order.
+6. [`Section`](./math/geometry/straightlines.go#L24):  Section calculates the Point that divides a line in specific ratio. DO NOT specify the ratio in the form m:n, specify it as r, where r = m / n.
+7. [`Slope`](./math/geometry/straightlines.go#L32):  Slope calculates the slope (gradient) of a line.
+8. [`YIntercept`](./math/geometry/straightlines.go#L37):  YIntercept calculates the Y-Intercept of a line from a specific Point.
 
 ---
 ##### Types
 
-1. [`Line`](./math/geometry/straightlines.go#L13): No description provided.
+1. [`EuclideanPoint`](./math/geometry/distance.go#L14): No description provided.
 
-2. [`Point`](./math/geometry/straightlines.go#L9): No description provided.
+2. [`Line`](./math/geometry/straightlines.go#L13): No description provided.
+
+3. [`Point`](./math/geometry/straightlines.go#L9): No description provided.
 
 
 ---
@@ -429,13 +432,53 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 ---
 </details><details>
+	<summary> <strong> heap </strong> </summary>	
+
+---
+
+##### Functions:
+
+1. [`New`](./structure/heap/heap.go#L15):  New gives a new heap object.
+2. [`NewAny`](./structure/heap/heap.go#L24):  NewAny gives a new heap object. element can be anything, but must provide less function.
+
+---
+##### Types
+
+1. [`Heap`](./structure/heap/heap.go#L9): No description provided.
+
+
+---
+</details><details>
+	<summary> <strong> heap_test </strong> </summary>	
+
+---
+
+##### Types
+
+1. [`testInt`](#L0): 
+
+	Methods:
+	1. [`Less`](./structure/heap/heap_test.go#L11): No description provided.
+2. [`testStudent`](#L0): 
+
+	Methods:
+	1. [`Less`](./structure/heap/heap_test.go#L20): No description provided.
+
+---
+</details><details>
 	<summary> <strong> kmp </strong> </summary>	
 
 ---
 
 ##### Functions:
 
-1. [`Kmp`](./strings/kmp/kmp.go#L4):  Kmp Function kmp performing the Knuth-Morris-Pratt algorithm. 
+1. [`Kmp`](./strings/kmp/kmp.go#L4):  Kmp Function kmp performing the Knuth-Morris-Pratt algorithm.
+
+---
+##### Types
+
+1. [`args`](./strings/kmp/kmp_test.go#L39): No description provided.
+
 
 ---
 </details><details>
@@ -510,23 +553,25 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 ##### Functions:
 
 1. [`Abs`](./math/abs.go#L11):  Abs returns absolute value
-2. [`Combinations`](./math/binomialcoefficient.go#L20):  C is Binomial Coefficient function This function returns C(n, k) for given n and k
-3. [`Cos`](./math/cos.go#L10):  Cos  returns the cosine of the radian argument x. [See more](https://en.wikipedia.org/wiki/Sine_and_cosine) [Based on the idea of Bhaskara approximation of cos(x)](https://math.stackexchange.com/questions/3886552/bhaskara-approximation-of-cosx)
-4. [`DefaultPolynomial`](./math/pollard.go#L16):  DefaultPolynomial is the commonly used polynomial g(x) = (x^2 + 1) mod n
-5. [`FindKthMax`](./math/kthnumber.go#L11):  FindKthMax returns the kth large element given an integer slice with nil `error` if found and returns -1 with `error` `search.ErrNotFound` if not found. NOTE: The `nums` slice gets mutated in the process.
-6. [`FindKthMin`](./math/kthnumber.go#L19):  FindKthMin returns kth small element given an integer slice with nil `error` if found and returns -1 with `error` `search.ErrNotFound` if not found. NOTE: The `nums` slice gets mutated in the process.
-7. [`IsPerfectNumber`](./math/perfectnumber.go#L34):  Checks if inNumber is a perfect number
-8. [`IsPowOfTwoUseLog`](./math/checkisnumberpoweroftwo.go#L10):  IsPowOfTwoUseLog This function checks if a number is a power of two using the logarithm. The limiting degree can be from 0 to 63. See alternatives in the binary package.
-9. [`Lerp`](./math/lerp.go#L5):  Lerp or Linear interpolation This function will return new value in 't' percentage  between 'v0' and 'v1'
-10. [`LiouvilleLambda`](./math/liouville.go#L24):  Lambda is the liouville function This function returns λ(n) for given number
-11. [`Mean`](./math/mean.go#L7): No description provided.
-12. [`Median`](./math/median.go#L12): No description provided.
-13. [`Mode`](./math/mode.go#L19): No description provided.
-14. [`Mu`](./math/mobius.go#L21):  Mu is the Mobius function This function returns μ(n) for given number
-15. [`Phi`](./math/eulertotient.go#L5):  Phi is the Euler totient function. This function computes the number of numbers less then n that are coprime with n.
-16. [`PollardsRhoFactorization`](./math/pollard.go#L29):  PollardsRhoFactorization is an implementation of Pollard's rho factorization algorithm using the default parameters x = y = 2
-17. [`Sin`](./math/sin.go#L9):  Sin returns the sine of the radian argument x. [See more](https://en.wikipedia.org/wiki/Sine_and_cosine)
-18. [`SumOfProperDivisors`](./math/perfectnumber.go#L17):  Returns the sum of proper divisors of inNumber.
+2. [`AliquotSum`](./math/aliquotsum.go#L14):  This function returns s(n) for given number
+3. [`Combinations`](./math/binomialcoefficient.go#L20):  C is Binomial Coefficient function This function returns C(n, k) for given n and k
+4. [`Cos`](./math/cos.go#L10):  Cos  returns the cosine of the radian argument x. [See more](https://en.wikipedia.org/wiki/Sine_and_cosine) [Based on the idea of Bhaskara approximation of cos(x)](https://math.stackexchange.com/questions/3886552/bhaskara-approximation-of-cosx)
+5. [`DefaultPolynomial`](./math/pollard.go#L16):  DefaultPolynomial is the commonly used polynomial g(x) = (x^2 + 1) mod n
+6. [`FindKthMax`](./math/kthnumber.go#L11):  FindKthMax returns the kth large element given an integer slice with nil `error` if found and returns -1 with `error` `search.ErrNotFound` if not found. NOTE: The `nums` slice gets mutated in the process.
+7. [`FindKthMin`](./math/kthnumber.go#L19):  FindKthMin returns kth small element given an integer slice with nil `error` if found and returns -1 with `error` `search.ErrNotFound` if not found. NOTE: The `nums` slice gets mutated in the process.
+8. [`IsPerfectNumber`](./math/perfectnumber.go#L34):  Checks if inNumber is a perfect number
+9. [`IsPowOfTwoUseLog`](./math/checkisnumberpoweroftwo.go#L10):  IsPowOfTwoUseLog This function checks if a number is a power of two using the logarithm. The limiting degree can be from 0 to 63. See alternatives in the binary package.
+10. [`Lerp`](./math/lerp.go#L5):  Lerp or Linear interpolation This function will return new value in 't' percentage  between 'v0' and 'v1'
+11. [`LiouvilleLambda`](./math/liouville.go#L24):  Lambda is the liouville function This function returns λ(n) for given number
+12. [`Mean`](./math/mean.go#L7): No description provided.
+13. [`Median`](./math/median.go#L12): No description provided.
+14. [`Mode`](./math/mode.go#L19): No description provided.
+15. [`Mu`](./math/mobius.go#L21):  Mu is the Mobius function This function returns μ(n) for given number
+16. [`Phi`](./math/eulertotient.go#L5):  Phi is the Euler totient function. This function computes the number of numbers less then n that are coprime with n.
+17. [`PollardsRhoFactorization`](./math/pollard.go#L29):  PollardsRhoFactorization is an implementation of Pollard's rho factorization algorithm using the default parameters x = y = 2
+18. [`PronicNumber`](./math/pronicnumber.go#L15):  PronicNumber returns true if argument passed to the function is pronic and false otherwise.
+19. [`Sin`](./math/sin.go#L9):  Sin returns the sine of the radian argument x. [See more](https://en.wikipedia.org/wiki/Sine_and_cosine)
+20. [`SumOfProperDivisors`](./math/perfectnumber.go#L17):  Returns the sum of proper divisors of inNumber.
 
 ---
 </details><details>
@@ -689,7 +734,8 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 ---
 ##### Functions:
 
-1. [`NewPolybius`](./cipher/polybius/polybius.go#L21):  NewPolybius returns a pointer to object of Polybius. If the size of "chars" is longer than "size", "chars" are truncated to "size".
+1. [`FuzzPolybius`](./cipher/polybius/polybius_test.go#L154): No description provided.
+2. [`NewPolybius`](./cipher/polybius/polybius.go#L21):  NewPolybius returns a pointer to object of Polybius. If the size of "chars" is longer than "size", "chars" are truncated to "size".
 
 ---
 ##### Types
@@ -798,6 +844,7 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 1. [`Decrypt`](./cipher/rsa/rsa.go#L43):  Decrypt decrypts encrypted rune slice based on the RSA algorithm
 2. [`Encrypt`](./cipher/rsa/rsa.go#L28):  Encrypt encrypts based on the RSA algorithm - uses modular exponentitation in math directory
+3. [`FuzzRsa`](./cipher/rsa/rsa_test.go#L79): No description provided.
 
 ---
 </details><details>
@@ -861,7 +908,7 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 ##### Functions:
 
 1. [`Bubble`](./sort/bubblesort.go#L9):  Bubble is a simple generic definition of Bubble sort algorithm.
-2. [`Bucket Sort`](./sort/bucketsort.go#L5): Bucket Sort works with the idea of distributing the elements of an array into a number of buckets. Each bucket is then sorted individually, either using a different sorting algorithm, or by recursively applying the bucket sorting algorithm.
+2. [`Bucket`](./sort/bucketsort.go#L7):  Bucket sorts a slice. It is mainly useful when input is uniformly distributed over a range.
 3. [`Comb`](./sort/combSort.go#L17):  Comb is a simple sorting algorithm which is an improvement of the bubble sorting algorithm.
 4. [`Count`](./sort/countingsort.go#L11): No description provided.
 5. [`Exchange`](./sort/exchangesort.go#L8): No description provided.
@@ -870,7 +917,7 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 8. [`Insertion`](./sort/insertionsort.go#L5): No description provided.
 9. [`Merge`](./sort/mergesort.go#L41):  Merge Perform merge sort on a slice
 10. [`MergeIter`](./sort/mergesort.go#L55): No description provided.
-11. [`Pancake Sort`](./sort/pancakesort.go#L7): Pancake Sort is a sorting algorithm that is similar to selection sort that reverses elements of an array. The Pancake Sort uses the flip operation to sort the array.
+11. [`Pancake`](./sort/pancakesort.go#L8):  Pancake sorts a slice using flip operations, where flip refers to the idea of reversing the slice from index `0` to `i`.
 12. [`ParallelMerge`](./sort/mergesort.go#L66):  ParallelMerge Perform merge sort on a slice using goroutines
 13. [`Partition`](./sort/quicksort.go#L12): No description provided.
 14. [`Patience`](./sort/patiencesort.go#L13): No description provided.
@@ -915,6 +962,7 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 ##### Functions:
 
 1. [`CountChars`](./strings/charoccurrence.go#L12):  CountChars counts the number of a times a character has occurred in the provided string argument and returns a map with `rune` as keys and the count as value.
+2. [`IsIsogram`](./strings/isisogram.go#L34): No description provided.
 
 ---
 </details><details>
@@ -924,16 +972,9 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 ##### Functions:
 
-1. [`Decrypt`](./cipher/transposition/transposition.go#L82): No description provided.
-2. [`Encrypt`](./cipher/transposition/transposition.go#L54): No description provided.
-
----
-##### Types
-
-1. [`KeyMissingError`](./cipher/transposition/transposition.go#L16): No description provided.
-
-2. [`NoTextToEncryptError`](./cipher/transposition/transposition.go#L15): No description provided.
-
+1. [`Decrypt`](./cipher/transposition/transposition.go#L81): No description provided.
+2. [`Encrypt`](./cipher/transposition/transposition.go#L51): No description provided.
+3. [`FuzzTransposition`](./cipher/transposition/transposition_test.go#L103): No description provided.
 
 ---
 </details><details>
